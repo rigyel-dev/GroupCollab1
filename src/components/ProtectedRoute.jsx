@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (!isAuthenticated) {
     // Save the current location user wanted to go
-    return <Navigate to="/signin" replace state={{ from: location }} />;
+    // return <Navigate to="/signin" replace state={{ from: location }} />;
   }
 
   return children;

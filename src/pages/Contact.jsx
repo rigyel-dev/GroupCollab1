@@ -1,7 +1,7 @@
 import { Typography } from 'antd'
 import React from 'react'
 
-function ContactForm() {
+function Contact() {
     const {Paragraph} = Typography
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0 }}>
@@ -86,4 +86,4 @@ const buttonStyle = {
 }
 
 
-export default ContactForm
+export default Contact

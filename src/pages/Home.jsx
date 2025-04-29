@@ -4,11 +4,11 @@ import { useAuth } from '../hooks/AuthContext';
 
 const Home = () => {
   const { logout } = useAuth();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
-    navigate('/signin');
+    // navigate('/signin');
   };
 
   const containerStyle = {

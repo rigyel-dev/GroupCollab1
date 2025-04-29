@@ -6,19 +6,19 @@ import { useAuth } from '../../hooks/AuthContext';
 
 const SignUp = () => {
   const { signup } = useAuth();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const result = signup(username, password);
-    if (result.success) {
-      navigate('/signin');
-    } else {
-      setError(result.message);
-    }
+    // e.preventDefault();
+    // const result = signup(username, password);
+    // if (result.success) {
+    //   navigate('/signin');
+    // } else {
+    //   setError(result.message);
+    // }
   };
 
   return (
@@ -51,9 +51,9 @@ const SignUp = () => {
           </button>
           {error && <p className="text-danger text-center mt-3">{error}</p>}
           <div className="text-center mt-3">
-            <Link to="/signin" className="text-success">
+            {/* <Link to="/signin" className="text-success">
               Already have an account? Sign In
-            </Link>
+            </Link> */}
           </div>
         </form>
       </div>
