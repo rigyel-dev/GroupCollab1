@@ -6,6 +6,7 @@ import ProtectedRoute from '../ProtectedRoute';
 import Home from '../home/Home';
 import About from '../About';
 import Contact from '../../pages/Contact';
+import Service from '../../pages/service/Service';
 // Import the ProtectedRoute component
 
 const AppRoutes = () => {
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
       <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+      <Route path="/service" element={<ProtectedRoute><Service /></ProtectedRoute>} />
     </Routes>
    
   );
