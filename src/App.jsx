@@ -6,8 +6,19 @@ import Home from './hooks/pages/Home';
 import ProtectedRoute from './components/ProtectedRoute';
 
 
+
+import Home from './components/home/Home'
+import './index.css';
+import Footer from './components/footer/Footer';
+import About from './components/About'
+
+
+import ContactForm from './pages/Contact';
+
+
 const App = () => {
   return (
+
     <Router>
       <Routes>
         <Route path="/signin" element={<SignIn />} />
@@ -31,3 +42,4 @@ const App = () => {
 };
 
 export default App;
+
