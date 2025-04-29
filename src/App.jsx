@@ -1,10 +1,20 @@
 import React from 'react'
+
+import Home from './components/home/Home'
+import './index.css';
+import Footer from './components/footer/Footer';
 import About from './components/About'
+
+
+
 const App = () => {
   return (
-    <div>
-      <About/>
-    </div>
+    <>
+    <Home/>
+          <About/>
+    <Footer/>
+    </>
+
   )
 }
 
