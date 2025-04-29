@@ -1,9 +1,11 @@
 import React from 'react'
-
+import About from './components/About'
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <About/>
+    </div>
   )
 }
 
-export default App
+export default App 
