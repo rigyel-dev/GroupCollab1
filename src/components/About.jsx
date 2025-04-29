@@ -1,12 +1,16 @@
 import React from 'react'
+import NavBar from './navbar/NavBar'
+import Footer from './footer/Footer'
 
-function App() {
+function About() {
   return (
-    <div className='App'>
+    <div className='app-container'>
       
-
+      <NavBar/>
       <main className='main-content'>
+      
         <section id='about'>
+        
           <h2>About Us</h2>
           <p>Welcome to our company! We are a dedicated team of professionals committed to delivering excellence in everything we do.</p>
 
@@ -19,8 +23,10 @@ function App() {
           <p>With years of experience in the industry, we pride ourselves on our customer-focused approach and commitment to excellence.</p>
         </section>
       </main>
+      <Footer/>
     </div>
+   
   )
 }
 
-export default App
+export default About

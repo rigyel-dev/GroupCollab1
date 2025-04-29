@@ -37,20 +37,26 @@
 
 
 import React from 'react'
+
 import SignIn from './pages/signin'
 import SignUp from './pages/SignUp'
 import Contact from './pages/Contact'
-import Home from './pages/Home'
+import './index.css';
+import About from './components/About'
+import Home from './pages/home/Home'
+import NavBar from './components/navbar/NavBar'
+import Footer from './components/footer/Footer';
+import AppRoutes from './components/AppRoutes/AppRoutes';
 
 const App = () => {
   return (
     <div>
-      <SignIn/>
-      <SignUp/>
-      <Contact/>
-      <Home/>
+     
+      <AppRoutes/>
+      
       
     </div>
+
   )
 }
 
