@@ -1,28 +1,19 @@
-import { useNavigate, useLocation, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { useAuth } from '../../hooks/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useAuth } from '../hooks/AuthContext';
 
-const SignIn = () => {
-  const { login, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+const SignUp = () => {
+  const { signup } = useAuth();
+  const navigate = useNavigate();  // Uncomment this line
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // Redirect to home if already authenticated
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate('/home'); // Or any other page you want to redirect to
-    }
-  }, [isAuthenticated, navigate]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const result = login(username, password);
+    const result = signup(username, password);
     if (result.success) {
-      const from = location.state?.from?.pathname || '/home';
-      navigate(from, { replace: true });
+      navigate('/signin'); // Navigates to the SignIn page after successful sign-up
     } else {
       setError(result.message);
     }
@@ -31,7 +22,7 @@ const SignIn = () => {
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
       <div className="card p-4 shadow" style={{ width: '350px' }}>
-        <h2 className="text-center text-success mb-4">Sign In</h2>
+        <h2 className="text-center text-success mb-4">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <input
@@ -54,12 +45,12 @@ const SignIn = () => {
             />
           </div>
           <button type="submit" className="btn btn-success w-100">
-            Login
+            Register
           </button>
           {error && <p className="text-danger text-center mt-3">{error}</p>}
           <div className="text-center mt-3">
-            <Link to="/signup" className="text-success">
-              Don't have an account? Sign Up
+            <Link to="/signin" className="text-success">
+              Already have an account? Sign In
             </Link>
           </div>
         </form>
@@ -68,4 +59,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

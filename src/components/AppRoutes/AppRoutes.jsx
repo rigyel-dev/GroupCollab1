@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import SignIn from '../../pages/signin';
-import SignUp from '../../pages/SignUp';
+import SignIn from '../../pages/SignIn';
+import SignUp from '../../pages/SingUp';
 import ProtectedRoute from '../ProtectedRoute';
-import Home from '../home/Home';
+import Home from '../../pages/Home';
 import About from '../About';
 import Contact from '../../pages/Contact';
-import Service from '../../pages/service/Service';
+import Service from '../../pages/Service';
 // Import the ProtectedRoute component
 
 const AppRoutes = () => {
