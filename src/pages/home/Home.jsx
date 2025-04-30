@@ -2,15 +2,13 @@ import React from "react";
 import CourseHighlights from "../../components/course-highlight/CourseHighlights";
 import Learning from "../../components/learning/Learning";
 import TrainingBenefits from "../../components/trainingbenefits/TrainingBenefits";
-import NavBar from "../navbar/NavBar";
-import Footer from "../footer/Footer";
 
 
 const Home = () => {
   return (
     <div>
       <h1>Welcome to My Website</h1>
-      <NavBar/>
+
       <main>
         <h2>Welcome to Our MERN Stack Development Training</h2>
         <p>
@@ -31,7 +29,6 @@ const Home = () => {
         <TrainingBenefits/>
         
       </main>
-      <Footer/>
     </div>
   );
 };
