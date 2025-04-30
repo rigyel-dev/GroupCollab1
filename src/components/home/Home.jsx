@@ -1,14 +1,12 @@
 import React from "react";
 import CourseHighlights from "../course-highlight/CourseHighlights";
 import Learning from "../learning/Learning";
-import TrainingBenefits from "../trainingbenefits/TrainingBenefits";
-import NavBar from "../navbar/NavBar";
 
 const Home = () => {
   return (
     <div>
       <h1>Welcome to My Website</h1>
-     <NavBar/>
+
       <main>
         <h2>Welcome to Our MERN Stack Development Training</h2>
         <p>
@@ -26,7 +24,6 @@ const Home = () => {
             <Learning />
           </div>
         </div>
-        <TrainingBenefits/>
         
       </main>
     </div>
