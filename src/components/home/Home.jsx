@@ -1,6 +1,7 @@
 import React from "react";
 import CourseHighlights from "../course-highlight/CourseHighlights";
 import Learning from "../learning/Learning";
+import TrainingBenefits from "../trainingbenefits/TrainingBenefits";
 
 const Home = () => {
   return (
@@ -23,7 +24,9 @@ const Home = () => {
             <h3>What You'll Learn</h3>
             <Learning />
           </div>
+         
         </div>
+        <TrainingBenefits/>
         
       </main>
     </div>
